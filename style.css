@@ -1,0 +1,70 @@
+/* Reset */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* utilitys */
+.debug {
+  border: 1px red solid;
+}
+/* Header */
+header {
+  background-image: url(./img/wall.png);
+}
+/* Main */
+main {
+  display: flex;
+  justify-content: center;
+}
+/* Container */
+#container {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 50px;
+  justify-content: center;
+}
+/* Title */
+#h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+/* Cards */
+#card {
+  text-align: center;
+}
+/* Footer */
+#footer {
+  height: 100px;
+  background-image: url(./img/wall.png);
+}
+/* Media Query */
+/* Mobile */
+@media screen and (min-width: 576px) {
+  #card {
+    width: calc(100% - 250px);
+  }
+}
+/* Tablette */
+@media screen and (min-width: 768px) {
+  #card {
+    width: calc((100% - 250px) / 2);
+  }
+}
+@media screen and (min-width: 992px) {
+  #card {
+    width: calc((100% - 250px) / 2);
+  }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1200px) {
+  #card {
+    width: calc((100% - 250px) / 3);
+  }
+}
