@@ -1,6 +1,6 @@
 // container
 const myCard = document.getElementById("container");
-// JasonPlaceHolder
+// JsonPlaceHolder
 const url = "https://jsonplaceholder.typicode.com/";
 const endPoint = "photos";
 
@@ -21,9 +21,21 @@ function generare() {
         myCard.innerHTML += template;
         // Faccio il resize dell img selezioanata dopo un  click
         const images = document.querySelectorAll(".imgs");
-        images.forEach((element) => {
+        // Overlay
+        const overLay = document.getElementById("overlay");
+
+        //  ciclo nella node liste "image" con un "index"
+        images.forEach((element, index) => {
           element.addEventListener("click", () => {
-            element.classList.toggle("resize");
+            // rimuovo il d-none dal overlay
+            overLay.classList.remove("d-none");
+            overLay.innerHTML = `<button type="button" id="button">Indietro</button> <img src="${res.data[index].url}" alt="" /> `;
+            // button
+            const button = document.getElementById("button");
+            // clickando al buttone agguingo il d-none al overlay ( faccio sparire l'overlay)
+            button.addEventListener("click", () => {
+              overLay.classList.add("d-none");
+            });
           });
         });
       }
