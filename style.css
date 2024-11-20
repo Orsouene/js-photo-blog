@@ -15,6 +15,14 @@
   border: 1px red solid;
 } */
 /* Header */
+.title {
+  color: #353535;
+  background-image: url(./img/cork.png);
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 header {
   background-image: url(./img/wall.png);
   color: #c77e39;
@@ -29,11 +37,12 @@ main {
   display: flex;
   justify-content: center;
   background-image: url(./img/cork.png);
+  width: 100%;
 }
 /* img */
 #img {
   padding-top: 30px;
-  width: 90%;
+  max-width: 90%;
 }
 /* comments */
 .comments {
@@ -58,7 +67,7 @@ main {
   padding-bottom: 20px;
   gap: 30px;
   justify-content: center;
-  max-width: 1200px;
+  width: 100%;
   scroll-behavior: smooth;
 }
 /* Cards */
@@ -72,9 +81,10 @@ main {
   position: relative;
   z-index: 999;
 }
-/* body {
+/* body bakcground */
+body {
   background-image: url(./img/wall.png);
-} */
+}
 /* Overlay */
 #overlay {
   display: flex;
@@ -109,27 +119,74 @@ main {
   bottom: 0;
   z-index: 9999;
 }
+/* Spinner */
 .fa,
 .fas {
   font-size: 5rem;
   color: white;
 }
+/* Span-buttone */
+.span {
+  animation: flicker 1.5s infinite alternate;
+  color: #bc13fe;
+}
+/*Animation span-button */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #bc13fe,
+      0 0 80px #bc13fe, 0 0 90px #bc13fe, 0 0 100px #bc13fe, 0 0 150px #bc13fe;
+  }
+  /* Eliminare il shadow */
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+/* tutti i buttone */
+.allButtons {
+  display: flex;
+  gap: 20px;
+}
+#buttonPrev,
+#buttonSucc {
+  cursor: pointer;
+  box-shadow: 0 0 0.1rem #fff, 0 0 0.2rem #fff, 0 0 1rem #bc13fe,
+    0 0 0.4rem #bc13fe, 0 0 2rem #bc13fe, inset 0 0 1rem #bc13fe;
+  border-radius: 30px;
+  border: 0.2rem solid #fff;
+  padding: 5px;
+}
 /* Buttone */
 #button {
   padding: 10px;
-  background-color: #c77e39;
-  color: white;
   border-radius: 30px;
-  box-shadow: -2px 3px 3px 0px #8b5057;
-  border: 0;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 0.1rem #fff, 0 0 0.2rem #fff, 0 0 1rem #bc13fe,
+    0 0 0.4rem #bc13fe, 0 0 2rem #bc13fe, inset 0 0 1rem #bc13fe;
   cursor: pointer;
   width: 100px;
 }
+
 /* display none */
 .d-none {
   display: none !important;
 }
 
+/* suggestion */
+#suggestion {
+  border: 1px solid #bc13fe;
+  width: 100px;
+  cursor: pointer;
+}
 /* Footer */
 #footer {
   background-image: url(./img/wall.png);
@@ -141,18 +198,27 @@ main {
 /* Mobile */
 @media screen and (min-width: 576px) {
   #card {
-    width: calc(100% - 250px);
+    width: calc(100% - 60px);
+  }
+  #container {
+    max-width: 540px;
   }
 }
 /* Tablette */
 @media screen and (min-width: 768px) {
   #card {
-    width: calc((100% - 250px) / 2);
+    width: calc((100% - 60px) / 2);
+  }
+  #container {
+    max-width: 720px;
   }
 }
 @media screen and (min-width: 992px) {
   #card {
-    width: calc((100% - 250px) / 2);
+    width: calc((100% - 60px) / 2);
+  }
+  #container {
+    max-width: 960px;
   }
 }
 
@@ -160,7 +226,10 @@ main {
 
 @media screen and (min-width: 1200px) {
   #card {
-    width: calc((100% - 250px) / 3);
+    width: calc((100% - 60px) / 3);
+  }
+  #container {
+    max-width: 1140px;
   }
 }
 
@@ -171,7 +240,18 @@ main {
 
 #card:hover {
   transform: rotate(10deg);
-  box-shadow: -15px 3px 3px 0px #8b5057;
+  box-shadow: 0 0 0.1rem #fff, 0 0 0.2rem #fff, 0 0 1rem #bc13fe,
+    0 0 0.4rem #bc13fe, 0 0 2rem #bc13fe, inset 0 0 1rem #bc13fe;
   transition: transform 0.5s;
   border: 2px solid rgba(255, 0, 0, 0.39);
+}
+
+.overlay-img:hover {
+  box-shadow: 0 0 0.1rem #fff, 0 0 0.2rem #fff, 0 0 1rem #bc13fe,
+    0 0 0.4rem #bc13fe, 0 0 2rem #bc13fe, inset 0 0 1rem #bc13fe;
+}
+
+#suggestion:hover {
+  box-shadow: 0 0 0.1rem #fff, 0 0 0.2rem #fff, 0 0 1rem #bc13fe,
+    0 0 0.4rem #bc13fe, 0 0 2rem #bc13fe, inset 0 0 1rem #bc13fe;
 }
