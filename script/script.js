@@ -42,4 +42,9 @@ function generare() {
     });
   }
 }
-generare();
+// tempo di attesa prima di carica la paggina
+const load = document.getElementById("loader");
+setInterval(() => {
+  load.classList.add("d-none");
+}, 1000);
+const clock = setTimeout(generare, 1000);
