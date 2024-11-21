@@ -4,62 +4,21 @@
   margin: 0px;
   box-sizing: border-box;
 }
+/******** utilitys********** */
+/* .debug {
+  border: 1px red solid;
+} */
 /* Google-font */
 .edu-tas-beginner {
   font-family: "Edu TAS Beginner", cursive;
   font-optical-sizing: auto;
   font-style: normal;
 }
-/* utilitys */
-/* .debug {
-  border: 1px red solid;
-} */
-/* Header */
-.title {
-  color: #353535;
-  background-image: url(./img/cork.png);
-
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* display none */
+.d-none {
+  display: none !important;
 }
-
-header {
-  background-image: url(./img/wall.png);
-  color: #c77e39;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  font-size: 2rem;
-}
-/* Main */
-main {
-  display: flex;
-  justify-content: center;
-  background-image: url(./img/cork.png);
-  width: 100%;
-}
-/* img */
-#img {
-  padding-top: 30px;
-  max-width: 90%;
-}
-/* comments */
-.comments {
-  padding: 20px;
-}
-/* pin */
-#pin {
-  width: 10%;
-  position: absolute;
-  position: absolute;
-  top: -17px;
-  left: 45%;
-}
-.display-none {
-  display: none;
-}
-/* Container */
+/* ***Container******/
 #container {
   display: flex;
   flex-wrap: wrap;
@@ -70,37 +29,9 @@ main {
   width: 100%;
   scroll-behavior: smooth;
 }
-/* Cards */
-#card {
-  border: 3px solid #8b5057;
-  border-radius: 30px;
-  text-align: center;
-  background-color: white;
-  box-shadow: -5px 3px 3px 0px #8b5057;
-  cursor: pointer;
-  position: relative;
-  z-index: 999;
-}
-/* body bakcground */
+/* Body-bakcground */
 body {
   background-image: url(./img/wall.png);
-}
-/* Overlay */
-#overlay {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.37);
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
 }
 /* Loader */
 #loader {
@@ -124,6 +55,78 @@ body {
 .fas {
   font-size: 5rem;
   color: white;
+}
+/******Header *****/
+#h1 {
+  color: #353535;
+  background-image: url(./img/cork.png);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header {
+  background-image: url(./img/wall.png);
+  color: #c77e39;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 2rem;
+}
+/***** Main********/
+main {
+  display: flex;
+  justify-content: center;
+  background-image: url(./img/cork.png);
+  width: 100%;
+}
+/* img */
+#img {
+  padding-top: 30px;
+  max-width: 90%;
+}
+/* comments */
+.comments {
+  padding: 20px;
+}
+/* pin */
+#pin {
+  width: 10%;
+  position: absolute;
+  position: absolute;
+  top: -17px;
+  left: 45%;
+}
+/* Cards */
+#card {
+  border: 3px solid #8b5057;
+  border-radius: 30px;
+  text-align: center;
+  background-color: white;
+  box-shadow: -5px 3px 3px 0px #8b5057;
+  cursor: pointer;
+  position: relative;
+  z-index: 999;
+}
+/******* Overlay*******/
+#overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.37);
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+/* Overlay-img */
+.overlay-img {
+  width: 400px;
 }
 /* Span-buttone */
 .span {
@@ -149,11 +152,8 @@ body {
     text-shadow: none;
   }
 }
-/* tutti i buttone */
-.allButtons {
-  display: flex;
-  gap: 20px;
-}
+/****** tutti i buttone *******/
+/* Buttone Prev-Succ */
 #buttonPrev,
 #buttonSucc {
   cursor: pointer;
@@ -161,9 +161,9 @@ body {
     0 0 0.4rem #bc13fe, 0 0 2rem #bc13fe, inset 0 0 1rem #bc13fe;
   border-radius: 30px;
   border: 0.2rem solid #fff;
-  padding: 5px;
+  padding: 15px;
 }
-/* Buttone */
+/* Buttone Home */
 #button {
   padding: 10px;
   border-radius: 30px;
@@ -175,26 +175,22 @@ body {
   cursor: pointer;
   width: 100px;
 }
-
-/* display none */
-.d-none {
-  display: none !important;
-}
-
-/* suggestion */
-#suggestion {
+/**** suggestions-Divs*****/
+#suggestion,
+#suggestion2 {
   border: 1px solid #bc13fe;
-  width: 100px;
+  width: 150px;
   cursor: pointer;
+  border-radius: 30px;
 }
-/* Footer */
+/******* Footer****** */
 #footer {
   background-image: url(./img/wall.png);
   height: 100px;
   padding-top: 10px;
 }
 
-/******** Media Query Desktop-first*************/
+/******** Media Query-Desktop-first*************/
 /* Mobile */
 @media screen and (min-width: 576px) {
   #card {
@@ -221,9 +217,7 @@ body {
     max-width: 960px;
   }
 }
-
 /* Desktop */
-
 @media screen and (min-width: 1200px) {
   #card {
     width: calc((100% - 60px) / 3);
@@ -234,10 +228,11 @@ body {
 }
 
 /*********** Hover**********/
+/* Nascondo il pin quando passo il mouse sopra la card */
 #card:hover #pin {
   display: none;
 }
-
+/* Ruoto l'immagine e faccio allargare il box-shadow quando passo il mouse sopra la card */
 #card:hover {
   transform: rotate(10deg);
   box-shadow: 0 0 0.1rem #fff, 0 0 0.2rem #fff, 0 0 1rem #bc13fe,
@@ -245,12 +240,12 @@ body {
   transition: transform 0.5s;
   border: 2px solid rgba(255, 0, 0, 0.39);
 }
-
+/* Creo un box-shadow quando passo il mouse sopra l'immagine dell'overlay */
 .overlay-img:hover {
   box-shadow: 0 0 0.1rem #fff, 0 0 0.2rem #fff, 0 0 1rem #bc13fe,
     0 0 0.4rem #bc13fe, 0 0 2rem #bc13fe, inset 0 0 1rem #bc13fe;
 }
-
+/* Creo un box-shadow quando passo il mouse sopra ogni div di suggestion */
 #suggestion:hover {
   box-shadow: 0 0 0.1rem #fff, 0 0 0.2rem #fff, 0 0 1rem #bc13fe,
     0 0 0.4rem #bc13fe, 0 0 2rem #bc13fe, inset 0 0 1rem #bc13fe;
